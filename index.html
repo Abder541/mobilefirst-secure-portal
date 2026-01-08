@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure Portal — Mobile-First</title>
+  <meta name="description" content="Mini-site mobile-first : UCD + UX orientée cybersécurité." />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta property="og:title" content="Secure Portal — Mobile-First" />
+  <meta property="og:description" content="Mini-site mobile-first : UCD + UX orientée cybersécurité." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Accueil Secure Portal">
+        <span aria-hidden="true">🛡️</span>
+        <span>Secure Portal</span>
+        <span class="badge">Mobile-first</span>
+      </a>
+      <nav class="nav" aria-label="Navigation">
+        <a href="login.html">Connexion</a>
+        <a href="reset.html">Réinitialiser</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container hero">
+        <div>
+          <h1>Portail de connexion — Recréation Mobile-First</h1>
+          <p>
+            Mini-site pédagogique mettant en avant une approche <strong>Mobile-First</strong> et une UX orientée
+            <strong>cybersécurité</strong> (prévention des erreurs humaines, messages non révélateurs, accessibilité).
+          </p>
+
+          <div class="kpis">
+            <div class="kpi"><div aria-hidden="true">📱</div><div><strong>Mobile d’abord</strong><span>1 colonne, zones tactiles, lecture rapide.</span></div></div>
+            <div class="kpi"><div aria-hidden="true">🔒</div><div><strong>UX de sécurité</strong><span>Moins d’erreurs et moins de fuites d’information.</span></div></div>
+            <div class="kpi"><div aria-hidden="true">🧪</div><div><strong>Itératif</strong><span>Test → feedback → amélioration (UCD).</span></div></div>
+            <div class="kpi"><div aria-hidden="true">♿</div><div><strong>Accessible</strong><span>Labels, contraste, focus visible.</span></div></div>
+          </div>
+
+          <div class="row" style="margin-top:18px;">
+            <a class="btn" href="login.html">Tester la connexion</a>
+            <a class="btn btn--ghost" href="dashboard.html">Voir le dashboard</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 style="margin:0 0 8px;">Ce que contient le mini-site</h2>
+          <p class="help">4 pages pour illustrer un parcours complet et cohérent.</p>
+          <div class="grid" style="margin-top:12px;">
+            <div class="feature"><h3>Connexion</h3><p>Champs clairs + aide + bouton “Afficher”.</p><a class="btn btn--ghost btn--small" href="login.html">Ouvrir</a></div>
+            <div class="feature"><h3>Réinitialisation</h3><p>Message neutre anti-énumération.</p><a class="btn btn--ghost btn--small" href="reset.html">Ouvrir</a></div>
+            <div class="feature"><h3>Dashboard</h3><p>Exemple d’écran post-connexion.</p><a class="btn btn--ghost btn--small" href="dashboard.html">Ouvrir</a></div>
+          </div>
+          <div class="alert" style="margin-top:14px;">
+            <p><strong>Note :</strong> Ce projet illustre la conception et la réflexion. Une authentification réelle nécessite un backend (MFA, rate limiting, CSRF, logs…).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-3">
+          <div class="card">
+            <h3 style="margin:0 0 8px;">Mobile-First</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted);">
+              <li>Base en 1 colonne</li>
+              <li>CTA visibles et accessibles</li>
+              <li>Breakpoints : 720px / 980px</li>
+              <li>Contenu priorisé</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 8px;">Sécurité & UX</h3>
+            <ul style="margin:0; padding-left:18px; color:var(--muted);">
+              <li>Erreurs génériques (anti-énumération)</li>
+              <li>Reset : “Si un compte existe…”</li>
+              <li>Rappel MFA</li>
+              <li>Parcours clair (moins d’erreurs)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 8px;">UCD (résumé)</h3>
+            <p class="help">
+              Comprendre le contexte → définir les besoins → concevoir → évaluer → itérer.
+              L’objectif est d’aligner l’interface avec les tâches réelles et les contraintes des utilisateurs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 — Abderahmane Chaouche</span>
+      <a class="pill" href="index.html">Accueil</a>
+    </div>
+  </footer>
+
+
+</body>
+</html>

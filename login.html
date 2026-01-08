@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connexion — Secure Portal</title>
+  <meta name="description" content="Page de connexion mobile-first avec bonnes pratiques UX de sécurité." />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta property="og:title" content="Connexion — Secure Portal" />
+  <meta property="og:description" content="Page de connexion mobile-first avec bonnes pratiques UX de sécurité." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Accueil Secure Portal">
+        <span aria-hidden="true">🛡️</span>
+        <span>Secure Portal</span>
+        <span class="badge">Mobile-first</span>
+      </a>
+      <nav class="nav" aria-label="Navigation">
+        <a href="login.html">Connexion</a>
+        <a href="reset.html">Réinitialiser</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <section class="card" aria-label="Formulaire de connexion">
+          <h1 style="margin:0 0 6px;">Connexion</h1>
+          <p class="help">Interface de démonstration (aucune donnée envoyée).</p>
+
+          <div class="alert good" role="note" aria-label="Conseil sécurité">
+            <p><strong>Conseil :</strong> active la MFA et utilise un mot de passe unique.</p>
+          </div>
+
+          <form class="form" onsubmit="return false;" style="margin-top:12px;">
+            <label>
+              Email ou identifiant
+              <input type="text" name="username" autocomplete="username" placeholder="ex : abderahmane@example.com" required />
+            </label>
+
+            <label>
+              Mot de passe
+              <input id="password" type="password" name="password" autocomplete="current-password" placeholder="••••••••" required />
+            </label>
+
+            <div class="row">
+              <button id="togglePw" class="btn btn--ghost btn--small" type="button" aria-pressed="false">Afficher</button>
+              <a class="pill" href="reset.html">Mot de passe oublié ?</a>
+            </div>
+
+            <button class="btn" type="submit">Se connecter</button>
+            <p class="help">Bonnes pratiques : message d’erreur générique “Identifiants invalides”.</p>
+          </form>
+        </section>
+
+        <aside class="card" aria-label="Justification UCD et sécurité">
+          <h2 style="margin:0 0 8px;">Choix UCD & cybersécurité</h2>
+          <ul style="margin:0; padding-left:18px; color:var(--muted);">
+            <li>Labels + exemples de format</li>
+            <li>Option “Afficher” pour réduire les erreurs</li>
+            <li>Parcours de récupération visible</li>
+            <li>Erreurs non révélatrices</li>
+            <li>Design mobile-first (priorisation)</li>
+          </ul>
+
+          <div class="alert" style="margin-top:14px;">
+            <p><strong>À prévoir en production :</strong> MFA, rate limiting, CSRF, journaux, alertes.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 — Abderahmane Chaouche</span>
+      <a class="pill" href="index.html">Accueil</a>
+    </div>
+  </footer>
+
+
+</body>
+</html>

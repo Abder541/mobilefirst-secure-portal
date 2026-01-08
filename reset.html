@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Réinitialisation — Secure Portal</title>
+  <meta name="description" content="Flux de réinitialisation avec message anti-énumération." />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta property="og:title" content="Réinitialisation — Secure Portal" />
+  <meta property="og:description" content="Flux de réinitialisation avec message anti-énumération." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="Accueil Secure Portal">
+        <span aria-hidden="true">🛡️</span>
+        <span>Secure Portal</span>
+        <span class="badge">Mobile-first</span>
+      </a>
+      <nav class="nav" aria-label="Navigation">
+        <a href="login.html">Connexion</a>
+        <a href="reset.html">Réinitialiser</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <section class="card" aria-label="Réinitialisation">
+          <h1 style="margin:0 0 6px;">Réinitialiser le mot de passe</h1>
+          <p class="help">Objectif : guider sans divulguer d’informations.</p>
+
+          <form class="form" onsubmit="return false;" style="margin-top:12px;">
+            <label>
+              Email associé au compte
+              <input type="email" name="email" autocomplete="email" placeholder="ex : abderahmane@example.com" required />
+            </label>
+
+            <button class="btn" type="submit">Envoyer</button>
+
+            <div class="alert" style="margin-top:10px;">
+              <p><strong>Message recommandé :</strong> “Si un compte existe, un email sera envoyé.”</p>
+            </div>
+          </form>
+        </section>
+
+        <aside class="card" aria-label="Explication anti-énumération">
+          <h2 style="margin:0 0 8px;">Pourquoi ce message ?</h2>
+          <p class="help">
+            Il réduit le risque d’<strong>énumération de comptes</strong> (ne pas confirmer l’existence d’un email),
+            tout en restant compréhensible pour l’utilisateur.
+          </p>
+          <ul style="margin:12px 0 0; padding-left:18px; color:var(--muted);">
+            <li>Texte simple et rassurant</li>
+            <li>Aucune information sensible</li>
+            <li>Flux court (mobile-friendly)</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 — Abderahmane Chaouche</span>
+      <a class="pill" href="index.html">Accueil</a>
+    </div>
+  </footer>
+
+
+</body>
+</html>
